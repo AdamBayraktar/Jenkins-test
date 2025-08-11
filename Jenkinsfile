@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install dependencies') {
             steps {
-                shh '''
+                sh '''
                 node -v
                 npm -v
                 npm i
