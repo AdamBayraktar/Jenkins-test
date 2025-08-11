@@ -1,9 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('Install dependencies') {
             steps {
-                echo 'Hello World'
+                shh '''
+                node -v
+                npm -v
+                npm i
+                '''
             }
         }
     }
